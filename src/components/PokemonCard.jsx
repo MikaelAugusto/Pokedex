@@ -1,12 +1,15 @@
-function PokemonCard() {
+function PokemonCard({id, name, type, imageUrl}) {
   return (
     <div>
-      <img
-        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/563.png"
-        alt="Pikachu"
-      />
-      <h2>#0563 — Cofagrigus</h2>
-      <p>Tipo: Fantasma</p>
+
+      <img src={imageUrl} alt={name}/> 
+
+      <h2>
+        #{String(id).padStart(3,'0')} — {name}
+      </h2>
+
+      <p>Tipo: {type}</p>
+
     </div>
   )
 }

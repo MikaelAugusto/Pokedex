@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer>
-      <p>Desenvolvido por [Mikael Augusto Lima Lopes] — Programação Frontend — UNIVAS</p>
+      <p>Desenvolvido por [Mi?el] — Programação Frontend — UNIVAS</p>
     </footer>
   )
 }
