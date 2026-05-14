@@ -16,6 +16,13 @@ const POKEMONS = [
     imageUrl:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/823.png",
   },
+  {
+    id: 937,
+    name: "Ceruledge",
+    type: "Fogo/Fantasma",
+    imageUrl:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/937.png",
+  },
 ];
 
 function PokemonList() {
@@ -36,6 +43,14 @@ function PokemonList() {
         onChange={(e) => setFiltro(e.target.value)}
         placeholder="Ex.: char"
       />
+      
+      {/* Essa bosta é um IF em um jsx */}
+      {listaFiltrada.length === 0 ? (
+        <label>, Nenhum pokemon encontrado para essa busca...</label>
+      ) : (
+        <label>, Mostrando {listaFiltrada.length} pokemons!</label>
+      )}
+      
 
       {listaFiltrada.map((pokemon) => (
         <PokemonCard
