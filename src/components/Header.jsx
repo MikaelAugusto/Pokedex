@@ -7,7 +7,7 @@ function Header() {
         </div>
         <div className="site-header__text">
           <h1>Pokédex</h1>
-          <p>Sua enciclopédia Pokémon</p>
+          <p>A enciclopédia Pokémon mais foda de todas</p>
         </div>
       </div>
     </header>
