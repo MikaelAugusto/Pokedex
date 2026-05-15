@@ -34,21 +34,29 @@ function PokemonList() {
   );
 
   return (
-    <section>
-      <label htmlFor="busca">Buscar por nome: </label>
-      <input
-        id="busca"
-        type="search"
-        value={filtro}
-        onChange={(e) => setFiltro(e.target.value)}
-        placeholder="Ex.: char"
-      />
-      
+    <section className="pokemon-catalog" id="catalogo" aria-labelledby="catalogo-titulo">
+      <div className="pokemon-catalog__head">
+        <h2 id="catalogo-titulo" className="pokemon-catalog__title">
+          Catálogo
+        </h2>
+          <div className="pokemon-toolbar">
+
+            <label htmlFor="busca">Buscar por nome: </label>
+            <input
+              id="busca"
+              type="search"
+              value={filtro}
+              onChange={(e) => setFiltro(e.target.value)}
+              placeholder="Ex.: char"
+            />
+            </div>
+      </div>
+
       {/* Essa bosta é um IF em um jsx */}
       {listaFiltrada.length === 0 ? (
-        <label>, Nenhum pokemon encontrado para essa busca...</label>
+          <label>Nenhum pokemon encontrado para essa busca...</label>
       ) : (
-        <label>, Mostrando {listaFiltrada.length} pokemons!</label>
+        <label>Mostrando {listaFiltrada.length} pokemon(s)!</label>
       )}
       
 

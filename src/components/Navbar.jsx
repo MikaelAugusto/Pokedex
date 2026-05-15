@@ -1,9 +1,11 @@
 function Navbar() {
   return (
-    <nav>
-      <a href="#">Início</a>
-      <a href="#">Pokémon</a>
-      <a href="#">Sobre</a>
+    <nav className="site-nav" aria-label="Navegação principal">
+      <div className="site-nav__inner">
+        <a href="#inicio">Início</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#sobre">Sobre</a>
+      </div>
     </nav>
   )
 }
